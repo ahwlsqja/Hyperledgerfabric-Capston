@@ -1,0 +1,293 @@
+{
+    "spring:request:pending-deposits": {
+      "channel": "spring:request:pending-deposits",
+      "ledger:pending-deposits": [
+        {
+          "id": "LEDGER_1715123456_user1",
+          "theme": "축제준비",
+          "amount": 150000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user1",
+          "creatorName": "김학생회",
+          "timestamp": 1715123456,
+          "expiryTime": 1715127056,
+          "description": "축제 무대 장비 대여 비용",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/stage_equipment.pdf"
+        },
+        {
+          "id": "LEDGER_1715134567_user2",
+          "theme": "동아리지원",
+          "amount": 75000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user2",
+          "creatorName": "이부회장",
+          "timestamp": 1715134567,
+          "expiryTime": 1715138167,
+          "description": "댄스 동아리 의상 구매 지원금",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/dance_club_costumes.pdf"
+        },
+        {
+          "id": "LEDGER_1715145678_user3",
+          "theme": "체육대회",
+          "amount": 220000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user3",
+          "creatorName": "박총무",
+          "timestamp": 1715145678,
+          "expiryTime": 1715149278,
+          "description": "체육대회 간식 및 음료 구매",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/sports_day_refreshments.pdf"
+        },
+        {
+          "id": "LEDGER_1715156789_user1",
+          "theme": "학습지원",
+          "amount": 45000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user1",
+          "creatorName": "김학생회",
+          "timestamp": 1715156789,
+          "expiryTime": 1715160389,
+          "description": "학과 스터디그룹 참고서적 구매",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/study_books.pdf"
+        },
+        {
+          "id": "LEDGER_1715167890_user2",
+          "theme": "사무비용",
+          "amount": 35000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user2",
+          "creatorName": "이부회장",
+          "timestamp": 1715167890,
+          "expiryTime": 1715171490,
+          "description": "학생회실 프린터 토너 및 A4용지 구매",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/office_supplies.pdf"
+        }
+      ]
+    },
+    "spring:request:pending-withdraws": {
+      "channel": "spring:request:pending-withdraws",
+      "ledger:pending-withdraws": [
+        {
+          "id": "LEDGER_1715123456_user1",
+          "theme": "축제준비",
+          "amount": 150000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user1",
+          "creatorName": "김학생회",
+          "timestamp": 1715123456,
+          "expiryTime": 1715127056,
+          "description": "축제 무대 장비 대여 비용",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/stage_equipment.pdf"
+        },
+        {
+          "id": "LEDGER_1715134567_user2",
+          "theme": "동아리지원",
+          "amount": 75000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user2",
+          "creatorName": "이부회장",
+          "timestamp": 1715134567,
+          "expiryTime": 1715138167,
+          "description": "댄스 동아리 의상 구매 지원금",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/dance_club_costumes.pdf"
+        },
+        {
+          "id": "LEDGER_1715145678_user3", 
+          "theme": "체육대회",
+          "amount": 220000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user3",
+          "creatorName": "박총무",
+          "timestamp": 1715145678,
+          "expiryTime": 1715149278,
+          "description": "체육대회 간식 및 음료 구매",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/sports_day_refreshments.pdf"
+        },
+        {
+          "id": "LEDGER_1715156789_user1",
+          "theme": "학습지원",
+          "amount": 45000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user1",
+          "creatorName": "김학생회",
+          "timestamp": 1715156789,
+          "expiryTime": 1715160389,
+          "description": "학과 스터디그룹 참고서적 구매",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/study_books.pdf"
+        },
+        {
+          "id": "LEDGER_1715167890_user2",
+          "theme": "사무비용",
+          "amount": 35000.0,
+          "entryType": "WITHDRAW",
+          "status": "PENDING",
+          "approvedBy": "",
+          "createdBy": "user2",
+          "creatorName": "이부회장",
+          "timestamp": 1715167890,
+          "expiryTime": 1715171490,
+          "description": "학생회실 프린터 토너 및 A4용지 구매",
+          "approvals": [],
+          "rejections": [],
+          "documentURL": "https://student-council-docs.s3.amazonaws.com/receipts/office_supplies.pdf"
+        }
+      ]
+    },
+    "spring:request:vote-status": {
+      "channel": "spring:request:vote-status",
+      "ledger:withdraw-vote:LEDGER_1715123456_user1": {
+        "entryId": "LEDGER_1715123456_user1",
+        "totalVotes": 7,
+        "approvals": 5,
+        "rejections": 2,
+        "result": "PENDING",
+        "processedAt": 1715224456
+      },
+      "ledger:withdraw- vote:LEDGER_1715134567_user2": {
+        "entryId": "LEDGER_1715134567_user2",
+        "totalVotes": 3,
+        "approvals": 1,
+        "rejections": 2,
+        "result": "PENDING",
+        "processedAt": 1715235567
+      },
+      "ledger:withdraw-vote:LEDGER_1715145678_user3": {
+        "entryId": "LEDGER_1715145678_user3",
+        "totalVotes": 10,
+        "approvals": 8,
+        "rejections": 2,
+        "result": "APPROVED",
+        "processedAt": 1715246678
+      },
+      "ledger:withdraw-vote:LEDGER_1715156789_user1": {
+        "entryId": "LEDGER_1715156789_user1",
+        "totalVotes": 6,
+        "approvals": 2,
+        "rejections": 4,
+        "result": "REJECTED",
+        "processedAt": 1715257789
+      },
+      "ledger:withdraw-vote:LEDGER_1715167890_user2": {
+        "entryId": "LEDGER_1715167890_user2",
+        "totalVotes": 0,
+        "approvals": 0,
+        "rejections": 0,
+        "result": "EXPIRED",
+        "processedAt": 1715268890
+      }
+    },
+    "spring:request:theme-balance": {
+      "channel": "spring:request:theme-balance",
+      "ledger:theme-balance:축제준비": {
+        "theme": "축제준비",
+        "totalDeposit": 500000.0,
+        "totalWithdraw": 150000.0,
+        "currentBalance": 350000.0,
+        "lastUpdated": 1715170000
+      },
+      "ledger:theme-balance:동아리지원": {
+        "theme": "동아리지원",
+        "totalDeposit": 300000.0,
+        "totalWithdraw": 175000.0,
+        "currentBalance": 125000.0,
+        "lastUpdated": 1715170500
+      },
+      "ledger:theme-balance:체육대회": {
+        "theme": "체육대회",
+        "totalDeposit": 450000.0,
+        "totalWithdraw": 320000.0,
+        "currentBalance": 130000.0,
+        "lastUpdated": 1715171000
+      },
+      "ledger:theme-balance:학습지원": {
+        "theme": "학습지원",
+        "totalDeposit": 200000.0,
+        "totalWithdraw": 95000.0,
+        "currentBalance": 105000.0,
+        "lastUpdated": 1715171500
+      },
+      "ledger:theme-balance:사무비용": {
+        "theme": "사무비용",
+        "totalDeposit": 100000.0,
+        "totalWithdraw": 65000.0,
+        "currentBalance": 35000.0,
+        "lastUpdated": 1715172000
+      }
+    },
+    "spring:request:alltheme-balance": {
+      "channel": "spring:request:alltheme-balance",
+      "ledger:theme-balances": [
+        {
+          "theme": "축제준비",
+          "totalDeposit": 500000.0,
+          "totalWithdraw": 150000.0,
+          "currentBalance": 350000.0,
+          "lastUpdated": 1715170000
+        },
+        {  
+          "theme": "동아리지원",
+          "totalDeposit": 300000.0,
+          "totalWithdraw": 175000.0,
+          "currentBalance": 125000.0,
+          "lastUpdated": 1715170500
+        },
+        {
+          "theme": "체육대회",
+          "totalDeposit": 450000.0,
+          "totalWithdraw": 320000.0,
+          "currentBalance": 130000.0,
+          "lastUpdated": 1715171000
+        },
+        {
+          "theme": "학습지원",
+          "totalDeposit": 200000.0,
+          "totalWithdraw": 95000.0,
+          "currentBalance": 105000.0,
+          "lastUpdated": 1715171500
+        },
+        {
+          "theme": "사무비용",
+          "totalDeposit": 100000.0,
+          "totalWithdraw": 65000.0,
+          "currentBalance": 35000.0,
+          "lastUpdated": 1715172000
+        }
+      ]
+    }
+  }
