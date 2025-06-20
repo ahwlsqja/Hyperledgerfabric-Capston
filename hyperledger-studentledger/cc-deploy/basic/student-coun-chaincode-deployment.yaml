@@ -1,0 +1,47 @@
+--- #---------------- Chaincode Deployment ---------------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chaincode-organization-student-council
+  namespace: fabric
+  labels:
+    app: chaincode-organization-student-council
+spec:
+  selector:
+    matchLabels:
+      app: chaincode-organization-student-council
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: chaincode-organization-student-council
+    spec:
+      # 스팟 인스턴스 노드 선택기
+      nodeSelector:
+        node-type: spot
+      # 스팟 인스턴스 톨러레이션
+      tolerations:
+      - key: "dedicated"
+        operator: "Equal"
+        value: "spot"
+        effect: "NoSchedule"
+      containers:
+        - image: ahwlsqja/organization-chaincode:1.0
+          imagePullPolicy: Always
+          name: chaincode-organization-student-council
+          env:
+            - name: CHAINCODE_ID
+              value: "organization:4a62d2e5a37e51a0b221f897c4f2ece4292861a720eb031499b319b7124b4816"
+            - name: CHAINCODE_SERVER_ADDRESS
+              value: "0.0.0.0:7052"
+          ports:
+            - containerPort: 7052
+          # 리소스 요청 추가
+          resources:
+            requests:
+              memory: "200Mi"
+              cpu: "200m"
+            limits:
+              memory: "300Mi"
+              cpu: "300m"

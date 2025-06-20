@@ -1,0 +1,33 @@
+peer0-student
+organization:815c943e213d2cbffec57f120d8fad7779ad5cf90d06c09613a29b65349bd8a7
+
+peer0-student-council
+organization:4a62d2e5a37e51a0b221f897c4f2ece4292861a720eb031499b319b7124b4816
+
+peer lifecycle chaincode approveformyorg --channelID mychannel --name organization --version 1.0 --init-required
+--package-id organization:815c943e213d2cbffec57f120d8fad7779ad5cf90d06c09613a29b65349bd8a7 --sequence 1 -o orderer:7050
+--tls --cafile $ORDERER_CA
+
+
+
+
+
+image
+ahwlsqja/organization-chaincode:1.0
+
+
+
+peer lifecycle chaincode approveformyorg --channelID mychannel --name basic --version 1.0 --init-required --package-id basic:c12240812563700fd08d4073111ee7859315ac2def4234b2c6e14432bed66ab1 --sequence 1 -o orderer:7050 --tls --cafile $ORDERER_CA 
+
+peer lifecycle chaincode approveformyorg --channelID mychannel --name basic --version 1.0 --init-required --package-id basic:0c48bfdc9021cf43f9f37f7ee0498e3e859d1f84d30f1d1869acaffb7a7cb7f7 --sequence 1 -o orderer:7050 --tls --cafile $ORDERER_CA
+student
+Chaincode code package identifier: basic:c12240812563700fd08d4073111ee7859315ac2def4234b2c6e14432bed66ab1
+
+student-council
+Chaincode code package identifier: basic:0c48bfdc9021cf43f9f37f7ee0498e3e859d1f84d30f1d1869acaffb7a7cb7f7
+
+peer lifecycle chaincode checkcommitread
+
+peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name basic --version 1.0 --init-required --sequence 1 -o -orderer:7050 --tls --cafile $ORDERER_CA
+
+peer lifecycle chaincode commit -o orderer:7050 --channelID mychannel --name basic --version 1.0 --sequence 1 --init-required --tls true --cafile $ORDERER_CA --peerAddresses peer0-student:7051 --tlsRootCertFiles /organizations/peerOrganizations/student.example.com/peers/peer0.student.example.com/tls/ca.crt --peerAddresses peer0-student-council:7051 --tlsRootCertFiles /organizations/peerOrganizations/student-council.example.com/peers/peer0.student-council.example.com/tls/ca.crt 

@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ca-student
+  namespace: fabric
+spec:
+  selector:
+    matchLabels:
+      app: ca-student
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ca-student
+    spec:
+      # 노드 선택기 추가
+      nodeSelector:
+        node-type: regular
+      # 톨러레이션 추가
+      tolerations:
+      - key: "dedicated"
+        operator: "Equal"
+        value: "regular"
+        effect: "NoSchedule"
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: fabric-pvc
+      containers:
+        - name: ca-student
+          image: hyperledger/fabric-ca:1.4.9
+          imagePullPolicy: "Always"
+          command: ["fabric-ca-server", "start", "-b", "admin:adminpw", "--port", "7054", "-d"]
+          resources:
+            requests:
+              memory: "300Mi"
+              cpu: "250m"
+            limits:
+              memory: "400Mi"
+              cpu: "350m"
+          env:
+            - name: FABRIC_CA_SERVER_CA_NAME
+              value: ca-student
+            - name: FABRIC_CA_SERVER_TLS_ENABLED
+              value: "true"
+            - name: FABRIC_CA_SERVER_CSR_CN
+              value: "ca-student"
+            - name: FABRIC_CA_SERVER_CSR_HOSTS
+              value: "ca-student"
+          volumeMounts:
+            - name: data
+              mountPath: /etc/hyperledger/fabric-ca-server
+              subPath: organizations/fabric-ca/student
